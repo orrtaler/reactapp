@@ -1,6 +1,7 @@
 // import Message from './comps/message';
 import './App.css';
 import CounterHW from './comps/counterHW';
+import FormColor from './comps/formColor';
 import Galary from './comps/galary';
 // import Counter from './comps/counter';
 // import InputVal from './comps/inputVal';
@@ -21,6 +22,7 @@ function App() {
       {/* <InputVal /> */}
       <CounterHW />
       <Galary />
+      <FormColor />
     </div>
   );
 }
