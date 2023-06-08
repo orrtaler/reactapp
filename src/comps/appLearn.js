@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Message from "./message"
+import Exchange from './exchange'
+import Counter from './counter'
 
 export default class AppLearn extends Component{
     render(){
@@ -7,6 +9,8 @@ export default class AppLearn extends Component{
             <div className="container">
                 <Message msg="First 1" bg="red"/>
                 <Message msg="First 2" bg="rgb(0,255,255)"/>
+                <Exchange />
+                <Counter/>
                 <hr/>
             </div>
         )
