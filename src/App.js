@@ -1,5 +1,6 @@
 // import Message from './comps/message';
 import './App.css';
+import Cake from './comps/cakes';
 import CounterHW from './comps/counterHW';
 import FormColor from './comps/formColor';
 import Galary from './comps/galary';
@@ -21,8 +22,13 @@ function App() {
       {/* <Counter /> */}
       {/* <InputVal /> */}
       <CounterHW />
+      <hr/>
       <Galary />
+      <hr/>
       <FormColor />
+      <hr/>
+      <Cake/>
+      <hr/>
     </div>
   );
 }
