@@ -2,6 +2,7 @@
 import './App.css';
 import Cake from './comps/cakes';
 import CounterHW from './comps/counterHW';
+import Exchange from './comps/exchange';
 import FormColor from './comps/formColor';
 import Galary from './comps/galary';
 // import Counter from './comps/counter';
@@ -28,6 +29,8 @@ function App() {
       <FormColor />
       <hr/>
       <Cake/>
+      <hr/>
+      <Exchange />
       <hr/>
     </div>
   );
