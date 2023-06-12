@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Counter from './counter';
 import Toggle from './toggle';
 import AppDate from './appDate';
+import SelectComp from './selectComp';
 
 export default class AppHooks extends Component {
 
@@ -16,8 +17,9 @@ export default class AppHooks extends Component {
                     <Toggle/>
                     <hr/>
                     <AppDate/>
+                    <hr/>
+                    <SelectComp />
                 </React.Fragment>
-
             </div>
         )
     }
