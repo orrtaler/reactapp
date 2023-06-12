@@ -9,7 +9,7 @@ export default class CarsList extends Component {
   }
 
   doApi = async () => {
-    let url = "https://project-yarin.herokuapp.com/cars?perPage=10";
+    let url = "https://cars-otdf.onrender.com/cars?perPage=10";
     let resp = await axios.get(url);
     console.log(resp.data);
     this.setState({ ar: resp.data });
