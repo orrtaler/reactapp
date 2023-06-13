@@ -1,7 +1,38 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import VipItem from './vipItem';
 
 export default function VipList() {
-  return (
-    <div>VipList</div>
+  const [ar,setAr] = useState([]);
+  
+  useEffect(() => {
+    doApi();
+  },[])
+
+  const doApi = async() => {
+    let url = "https://expressrichpepole.onrender.com"
+    try{
+      let resp = await axios.get(url);
+      console.log(resp.data);
+      setAr(resp.data);
+    }
+    catch(err){
+      console.log(err)
+      alert("There problem, come back later")
+    }
+  }
+
+  return(
+    <div className='container'>
+        <h2>List of vip:</h2>
+        <div className="row g-2">
+            {ar.map(item => {
+                return(
+                    <VipItem key={item.id} item={item}/>
+                )
+            })}
+            {ar.length < 1 && <h2>Loding ...</h2>}
+        </div>
+    </div>
   )
-}
+  }
