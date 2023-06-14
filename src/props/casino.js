@@ -3,30 +3,46 @@ import { useState } from 'react'
 
 export default function Casino() {
 
-    const [counter, setCounter] = useState(5);
+  const color_ar = ["green", "red"];
+  const ans_ar = ["you win ", "you lose"];
 
-    // <input onKeyDown={(e) => {
-    //   if(e.key == "Enter"){
-    //     props.doApi(inputRef.current.value)
-    //   }
+  const [counter, setCounter] = useState(5);
+  const [winOrLose, setWinOrLose] = useState(1);
 
-    // const inputRef = useRef();
+  // useEffect(() => {
+  //   doApi("israel")
+  // },[])
 
+  rollDice = () => {
+    if(counter > 0){
+      let rnd=Math.random()*6;
+      rnd=Math.ceil(rnd);
+      if(rnd==5||rnd==6){
+        setCounter(counter+1);
+        // setCounter((counter) => counter + 1);
+        setWinOrLose(winOrLose=0);
+      }
+      else{
+        setCounter(counter-1);
+        // setCounter((counter) => counter - 1);
+        setWinOrLose(winOrLose=1);
+      }
+  
+      // document.querySelector("#id_cons").innerHTML=coins;
+      // document.querySelector("#id_img").src=`dice_images/dice${rnd}.jpg`;
+  }else{
+      alert("you need give money from the bank");
+      setCounter(counter=0);
+  }
+}
 
-    // useEffect(() => {
-    //   doApi("israel")
-    // },[])
-
-
-    
   return (
-//    <div class="container">
-//     <h2>coins:<span id="id_cons"></span></h2>
-    
-//     <img id="id_img" src="dice_images/dice1.jpg" alt="dice" width="100">
-//     <br>
-//    <h2 id="id_ans"></h2>
-//     <button  class=" btn btn-info" onclick="rollDice()">roll</button>
-// </div>
+   <div className="container">
+    <h2>coins: {counter}</h2>
+    {/* <img id="id_img" src="dice_images/dice1.jpg" alt="dice" width="100"> */}
+    {/* <br> */}
+   <h2 style={color_ar[winOrLose]}>{ans_ar[winOrLose]}</h2>
+    <button className=" btn btn-info" onClick={rollDice()}>roll</button>
+</div>
   )
 }
