@@ -3,15 +3,30 @@ import { useState } from 'react'
 
 export default function Casino() {
 
-    const [counter] = useState(5);
+    const [counter, setCounter] = useState(5);
+
+    // <input onKeyDown={(e) => {
+    //   if(e.key == "Enter"){
+    //     props.doApi(inputRef.current.value)
+    //   }
+
+    // const inputRef = useRef();
+
+
+    // useEffect(() => {
+    //   doApi("israel")
+    // },[])
+
+
     
   return (
-    // div class="container">
-    // <h1>Player</h1>
-    // <img src="images/dice1.jpg" alt="dice">
-    // <h2 id="id_h2"></h2>
-    // <h3>coins: <span id="id_span"></span></h3>
-    // <button onclick="roll()" class="btn btn-info">roll</button>
-    // </div>
+//    <div class="container">
+//     <h2>coins:<span id="id_cons"></span></h2>
+    
+//     <img id="id_img" src="dice_images/dice1.jpg" alt="dice" width="100">
+//     <br>
+//    <h2 id="id_ans"></h2>
+//     <button  class=" btn btn-info" onclick="rollDice()">roll</button>
+// </div>
   )
 }
