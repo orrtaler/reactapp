@@ -3,7 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
 import About from "./comps/about";
-// import Form from "./comps/form";
+import Form from "./comps/form";
 import Home from "./comps/home";
 import AppEmp from "./comps_employee/appEmp";
 import Header from "./comps_ststic/header";
@@ -34,9 +34,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/employee" element={<AppEmp />} />
           <Route path="/employee/:company" element={<AppEmp />} />
-          {/* <Route path="/form" element={<Form />} />
-          <Route path="/counter" element={<Counter />} />
-          <Route path="/todos" element={<AppTodo />} /> */}
+          <Route path="/form" element={<Form />} />
+          {/* <Route path="/counter" element={<Counter />} /> */}
+          {/* <Route path="/todos" element={<AppTodo />} /> */}
           {/* כוכבית נשאיר לעמוד 404 אם לא מוצא אף
         ראוט יפעיל את מה שעם פאט' של כוכבית */}
           <Route path="*" element={<h2>Page 404, not found!</h2>} />
