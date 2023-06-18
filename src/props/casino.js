@@ -3,13 +3,13 @@ import { useState } from 'react'
 
 export default function Casino() {
 
-  const color_ar = ["green", "red"];
-  const ans_ar = ["you win ", "you lose"];
+  const color_ar = ["","green", "red"];
+  const ans_ar = ["","you win ", "you lose"];
   const img_ar = ["dice1.jpg", "dice2.jpg", "dice3.jpg", "dice4.jpg", "dice5.jpg", "dice6.jpg"]
 
   const [counter, setCounter] = useState(5);
   const [winOrLose, setWinOrLose] = useState(0);
-  const [rnd, setRnd] = useState(0);
+  const [rnd, setRnd] = useState(1);
 
   const rollDice = () => {
     if (counter > 0) {
@@ -34,7 +34,7 @@ export default function Casino() {
   return (
     <div className="container">
       <h2>coins: {counter}</h2>
-      <img src={"/images/" + img_ar[rnd]} width="200" height="200" />
+      <img src={"/images/" + img_ar[rnd - 1]} width="200" height="200" />
       {/* <img id="id_img" src="dice_images/dice1.jpg" alt="dice" width="100"> */}
       {/* <br> */}
       <h2 style={{ color: color_ar[winOrLose] }}>{ans_ar[winOrLose]}</h2>
