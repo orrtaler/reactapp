@@ -12,7 +12,7 @@ import counterSlice from "./features/counterSlice";
 import todosSlice from "./features/todosSlice";
 
 import './App.css';
-// import AppTodo from "./todoRedux_comps/appTodo";
+import AppTodo from "./todoRedux_comps/appTodo";
 
 // הגדרת הסטור הגלובלי שיספוק פרובידר והסלייסים
 // של הרידיוסר שהוא מכיל בתוכו
@@ -36,7 +36,7 @@ function App() {
           <Route path="/employee/:company" element={<AppEmp />} />
           <Route path="/form" element={<Form />} />
           <Route path="/counter" element={<Counter />} />
-          {/* <Route path="/todos" element={<AppTodo />} /> */}
+          <Route path="/todos" element={<AppTodo />} />
           {/* כוכבית נשאיר לעמוד 404 אם לא מוצא אף
         ראוט יפעיל את מה שעם פאט' של כוכבית */}
           <Route path="*" element={<h2>Page 404, not found!</h2>} />
